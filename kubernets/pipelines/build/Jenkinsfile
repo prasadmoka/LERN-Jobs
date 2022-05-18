@@ -37,8 +37,8 @@ node('build-slave') {
 
                 stage('Retagging'){
                    sh """
-                      docker tag knowledge-platform-jobs:${build_tag} ${hub_org}/knowledge-platform-jobs:${build_tag}
-                      echo {\\"image_name\\" : \\"knowledge-platform-jobs\\", \\"image_tag\\" : \\"${build_tag}\\", \\"node_name\\" : \\"${env.NODE_NAME}\\"} > metadata.json
+                      docker tag lern-jobs:${build_tag} ${hub_org}/lern-jobs:${build_tag}
+                      echo {\\"image_name\\" : \\"lern-jobs\\", \\"image_tag\\" : \\"${build_tag}\\", \\"node_name\\" : \\"${env.NODE_NAME}\\"} > metadata.json
                       """ 
                 }
 
